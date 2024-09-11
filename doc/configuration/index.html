@@ -1,0 +1,973 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="ZRFkU136mBXIuYnH8_NxhFf8nOdiY43cdzVi6FTIOJ8">
+<!-- SEO by creativitas.dev -->
+<meta name="google-site-verification" content="fJTzwsNcz2AtRxQpJZzU7db7TLPdR_lKSAXfyWDtHB4">
+<title>Configuration</title>
+<meta content="Configuration" property="og:title">
+<meta content="Configuration" name="twitter:title">
+<meta content="Configuration" name="title">
+<meta content="Configuration" property="og:site_name">
+<meta content="Let Configuration your Documentation Site Dockar Project" name="description">
+<meta content="Let Configuration your Documentation Site Dockar Project" property="facebook:description">
+<meta content="Let Configuration your Documentation Site Dockar Project" property="og:description">
+<meta content="Let Configuration your Documentation Site Dockar Project" name="twitter:description">
+<meta property="twitter:card" content="summary_large_image">
+<meta content="/media/img/dockarshoot/search.png" name="twitter:image">
+<meta content="/media/img/dockarshoot/search.png" property="facebook:image">
+<meta content="/media/img/dockarshoot/search.png" property="og:image">
+<meta content="Let Configuration your Documentation Site Dockar Project" property="og:image:alt">
+<meta content="Let Configuration your Documentation Site Dockar Project" name="twitter:image:alt">
+<link href="/dockar/media/img/dockarlogo.png" rel="icon" type="image/x-icon">
+<meta content="https://www.hockeycomputindo.com" property="facebook:author">
+<meta content="https://www.axcora.com" property="twitter:author">
+<meta content="https://www.hockeycomputindo.com/en/jamstack/" name="twitter:site">
+<meta content="www.fiverr.com/creativitas" name="developer">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://dockar.axcora.com/doc/configuration/">
+<link rel="alternate" href="https://dockar.axcora.com/feed/atom.njk" type="application/atom+xml" title="Dockar">
+<link rel="alternate" href="https://dockar.axcora.com/feed/json.njk" type="application/json" title="Dockar">
+<meta name="generator" content="Eleventy v3.0.0">
+
+<!-- SEO by creativitas.dev -->
+<link href="https://dockar.axcora.com/css/doc.css" rel="stylesheet">
+<link href="https://dockar.axcora.com/css/main.css" rel="stylesheet">
+<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}</style>
+</head>
+<body>
+ <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+<symbol id="check2" viewBox="0 0 16 16">
+<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+</symbol>
+<symbol id="circle-half" viewBox="0 0 16 16">
+<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+</symbol>
+<symbol id="moon-stars-fill" viewBox="0 0 16 16">
+<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+</symbol>
+<symbol id="sun-fill" viewBox="0 0 16 16">
+<path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</symbol>
+</svg>
+
+
+<div class="desktop">
+<div class="desktop">
+<nav class="container-fluid border-bottom text-body-emphasis bg-body-tertiary fixed-top">
+<div class="row p-3">
+<div class="col-md-4">
+<a href="https://dockar.axcora.com" class="navbar-brand"><picture><source type="image/avif" srcset="/dockar/img/IrV972BHBs-500.avif 500w"><source type="image/webp" srcset="/dockar/img/IrV972BHBs-500.webp 500w"><img loading="lazy" decoding="async" src="/dockar/img/IrV972BHBs-500.png" alt="Dockar" class="img-fluid me-1 img-icon-nav" width="500" height="500"></picture> <strong>Dockar</strong></a>
+</div>
+
+
+<div class="col-md-4">
+<form class="d-flex" role="search" data-bs-toggle="modal" data-bs-target="#searchModal">
+<input class="form-control me-2" type="search" placeholder="🔍     Search" aria-label="Search">
+</form>
+</div>
+
+
+<div class="col-md-4 text-end">
+<button class="btn btn-sm align-items-center rounded" type="button" aria-expanded="false" data-bs-toggle="dropdown">
+<i class="bi bi-grid"></i>
+<span class="visually-hidden" id="pages">Toggle Page</span>
+</button>
+<ul class="dropdown-menu dropdown-menu-end shadow semi" aria-labelledby="pages">
+
+<li>
+<a href="/dockar/">
+<button type="button" class="dropdown-item d-flex align-items-center" aria-pressed="false">
+Home
+</button>
+</a>
+</li>
+
+<li>
+<a href="/dockar/about/">
+<button type="button" class="dropdown-item d-flex align-items-center" aria-pressed="false">
+About
+</button>
+</a>
+</li>
+
+<li>
+<a href="/dockar/doc/introduction/">
+<button type="button" class="dropdown-item d-flex align-items-center" aria-pressed="false">
+Docs
+</button>
+</a>
+</li>
+
+<li>
+<a href="/dockar/blog/">
+<button type="button" class="dropdown-item d-flex align-items-center" aria-pressed="false">
+Blog
+</button>
+</a>
+</li>
+
+<li>
+<a href="/dockar/showcase/">
+<button type="button" class="dropdown-item d-flex align-items-center" aria-pressed="false">
+Showcase
+</button>
+</a>
+</li>
+
+<li>
+<a href="/dockar/addsite/">
+<button type="button" class="dropdown-item d-flex align-items-center" aria-pressed="false">
+Add Site
+</button>
+</a>
+</li>
+
+<li>
+<a href="/dockar/sponsor/">
+<button type="button" class="dropdown-item d-flex align-items-center" aria-pressed="false">
+Sponsor
+</button>
+</a>
+</li>
+
+<li>
+<a href="/dockar/contact/">
+<button type="button" class="dropdown-item d-flex align-items-center" aria-pressed="false">
+Contact
+</button>
+</a>
+</li>
+
+</ul>
+
+
+
+<a href="https://github.com/mesinkasir/dockar/" class="btn btn-sm rounded" title="Github Repo">
+<i class="bi bi-github"></i>
+</a>
+
+<a href="https://www.hockeycomputindo.com/themes/" class="btn btn-sm rounded" title="JAMSTACK THEMES">
+<i class="bi bi-rocket-takeoff"></i>
+</a>
+
+<a href="https://creativitas.dev/services/" class="btn btn-sm rounded" title="JAMSTACK DEVELOPER">
+<i class="bi bi-robot"></i>
+</a>
+
+
+<button class="btn btn-sm align-items-center rounded" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+<svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+<span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+</button>
+<ul class="dropdown-menu dropdown-menu-end shadow semi" aria-labelledby="bd-theme-text">
+<li>
+<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+<svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+Light
+<svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+</button>
+</li>
+<li>
+<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+<svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+Dark
+<svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+</button>
+</li>
+<li>
+<button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+<svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+Auto
+<svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+</button>
+</li>
+</ul>
+
+</div>
+</div>
+</nav>
+</div>  
+
+<div class="container-fluid">
+<div class="row docs-page">
+<div class="col-md-3 p-3" id="doku" data-bs-spy="scroll" data-bs-target="#docu-lists">
+<p><strong>Documentation</strong></p>
+
+
+<ul id="docu-lists">
+<li class="nav-item ms-1">
+<a href="https://dockar.axcora.com/doc/introduction/" class="nav-link text-body-secondary" }="">Introduction</a></li><li class="nav-item dropdown ms-1 text-body-secondary">
+<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">Get Started</a>
+<ul>
+<li class="nav-item ms-1">
+<a href="https://dockar.axcora.com/doc/getstart/download/" class="nav-link text-body-secondary" }="">Download</a></li>
+<li class="nav-item ms-1">
+<a href="https://dockar.axcora.com/doc/getstart/install/" class="nav-link text-body-secondary" }="">Installation</a></li>
+<li class="nav-item ms-1">
+<a href="https://dockar.axcora.com/doc/getstart/runproject/" class="nav-link text-body-secondary" }="">Run Project</a></li></ul>
+</li><li>
+</li>
+<li class="nav-item active bg-body-tertiary rounded-start p-2" aria-current="page">
+<a href="https://dockar.axcora.com/doc/configuration/" class="nav-link active text-body-emphasis" }="">Configuration</a></li>
+<li class="nav-item ms-1">
+<a href="https://dockar.axcora.com/doc/media/" class="nav-link text-body-secondary" }="">Media</a></li>
+<li class="nav-item ms-1">
+<a href="https://dockar.axcora.com/doc/youtube/" class="nav-link text-body-secondary" }="">Youtube Embed</a></li>
+<li class="nav-item ms-1">
+<a href="https://dockar.axcora.com/doc/page/" class="nav-link text-body-secondary" }="">Static Page</a></li><li class="nav-item dropdown ms-1 text-body-secondary">
+<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">Doc Page</a>
+<ul>
+<li class="nav-item ms-1">
+<a href="https://dockar.axcora.com/doc/docpage/doc-list/" class="nav-link text-body-secondary" }="">Doc List</a></li>
+<li class="nav-item ms-1">
+<a href="https://dockar.axcora.com/doc/docpage/standard-doc/" class="nav-link text-body-secondary" }="">Standard Doc</a></li>
+<li class="nav-item ms-1">
+<a href="https://dockar.axcora.com/doc/docpage/sub-doc/" class="nav-link text-body-secondary" }="">Sub Doc</a></li></ul>
+</li><li>
+</li><li class="nav-item dropdown ms-1 text-body-secondary">
+<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">Blog Page</a>
+<ul>
+<li class="nav-item ms-1">
+<a href="https://dockar.axcora.com/doc/blogpage/blog-list/" class="nav-link text-body-secondary" }="">Blog List</a></li>
+<li class="nav-item ms-1">
+<a href="https://dockar.axcora.com/doc/blogpage/article-blog-post/" class="nav-link text-body-secondary" }="">Article Post</a></li></ul>
+</li><li>
+</li></ul>
+</div>
+
+<div class="col-md-7 p-3 docs-article">
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+<ol class="breadcrumb semi">
+<li class="breadcrumb-item"><a href="https://dockar.axcora.com">Home</a></li>
+<li class="breadcrumb-item"><a href="https://dockar.axcora.com/doc/">Doc</a></li>
+<li class="breadcrumb-item active" aria-current="page">Configuration</li>
+</ol>
+</nav>
+
+<h1 id="configuration">Configuration</h1>
+<picture><source type="image/avif" srcset="/dockar/img/zw3HGl6uf0-1366.avif 1366w"><source type="image/webp" srcset="/dockar/img/zw3HGl6uf0-1366.webp 1366w"><img loading="lazy" decoding="async" src="/dockar/img/zw3HGl6uf0-1366.png" width="1366" height="681" class="img-fluid shadow-sm mb-3 mt-3" alt="Configuration"></picture>
+<h3 id="configure-your-docs-site" tabindex="-1">Configure Your Docs Site <a class="header-anchor" href="#configure-your-docs-site"></a></h3>
+<p>To configure your site you can access on <code>_data/metadata.js</code> and open file with code editor.</p>
+<h3 id="seo-setup" tabindex="-1">SEO Setup <a class="header-anchor" href="#seo-setup"></a></h3>
+<p>For first let we setup your SEO , such title, description , favicon , and logo for your site.</p>
+<p>Don't forget , for media such image , video ,pdf and others file you need to upload on <code>content/media</code> , next you can simply add your media in to frontmatter.</p>
+<pre class="language-js" tabindex="0"><code class="language-js">	<span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">"Your title in here..."</span><span class="token punctuation">,</span>
+	<span class="token literal-property property">url</span><span class="token operator">:</span> <span class="token string">"Insert your domain url"</span><span class="token punctuation">,</span>
+	<span class="token literal-property property">language</span><span class="token operator">:</span> <span class="token string">"en"</span><span class="token punctuation">,</span>
+	<span class="token literal-property property">description</span><span class="token operator">:</span> <span class="token string">"Description about your docs site here..."</span><span class="token punctuation">,</span>
+	<span class="token literal-property property">image</span><span class="token operator">:</span> <span class="token string">"Your image in here..."</span><span class="token punctuation">,</span>
+	<span class="token literal-property property">favicon</span><span class="token operator">:</span> <span class="token string">"/media/img/dockarlogo.png"</span><span class="token punctuation">,</span></code></pre>
+<h3 id="widget-area" tabindex="-1">Widget Area <a class="header-anchor" href="#widget-area"></a></h3>
+<p>On this project you can activate or deactivate widget, such footer, social icon, and pagefind search functional.</p>
+<p>To activate you can change widget to be <code>true</code></p>
+<p>To deactivate widget you can simply change widget to be <code>false</code></p>
+<pre class="language-js" tabindex="0"><code class="language-js">	<span class="token literal-property property">show_social_icon</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// change false if you do not want to show social icon navbar</span>
+	<span class="token literal-property property">show_footer</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// change false if you do not want to show footer</span>
+	<span class="token literal-property property">show_search</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// change false if you do not want to show search widget</span></code></pre>
+<h3 id="search-widget" tabindex="-1">Search Widget <a class="header-anchor" href="#search-widget"></a></h3>
+<p>If you want to customize the placeholder and search title, you can change the code on this line.</p>
+<pre class="language-js" tabindex="0"><code class="language-js">    <span class="token literal-property property">search_widget</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                        <span class="token literal-property property">nav_title</span><span class="token operator">:</span> <span class="token string">"Change Text for your placeholder search widget here..."</span><span class="token punctuation">,</span>
+                        <span class="token literal-property property">modal_title</span><span class="token operator">:</span> <span class="token string">"Change text for your modal search title in here..."</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+<h3 id="github-collaborators" tabindex="-1">Github Collaborators <a class="header-anchor" href="#github-collaborators"></a></h3>
+<p>Dockar allows you to create collaboration for your project, first you need to add your github repo project. To use this feature you need to enable it on your document page for collaboration.</p>
+<p>Add your github repo on this line code</p>
+<pre class="language-js" tabindex="0"><code class="language-js">    <span class="token literal-property property">github_project</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                        <span class="token literal-property property">repo</span><span class="token operator">:</span> <span class="token string">"https://github.com/user/yourrepo"</span><span class="token punctuation">,</span>
+                        <span class="token literal-property property">branch</span><span class="token operator">:</span> <span class="token string">"add your repo branch here.."</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+<h3 id="navigation-area" tabindex="-1">Navigation Area <a class="header-anchor" href="#navigation-area"></a></h3>
+<p>To change nav page area you can access this line code, and customize it.</p>
+<pre class="language-js" tabindex="0"><code class="language-js">
+	<span class="token literal-property property">nav</span><span class="token operator">:</span> 
+          <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+        		<span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Home"</span><span class="token punctuation">,</span>
+		        <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">"/"</span>
+	         <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+        		<span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"About"</span><span class="token punctuation">,</span>
+		        <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">"/about/"</span>
+	         <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+        		<span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"your navbar title..."</span><span class="token punctuation">,</span>
+		        <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">"insert url page link here.."</span>
+	         <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span></code></pre>
+<h3 id="social-icon" tabindex="-1">Social Icon <a class="header-anchor" href="#social-icon"></a></h3>
+<p>After your have enable social icon, now you can change social icon area, you can access this line code, and customize it.</p>
+<p>Insert title, and to change icon you can see on <a href="https://icons.getbootstrap.com/">bootstrap icon →</a> , next you can insert bootstrap icon, example <code>&lt;i class=&quot;bi bi-airplane&quot;&gt;&lt;/i&gt;</code> just copy and insert this code <code>alphine</code> in to icon frontmatter.</p>
+<pre class="language-js" tabindex="0"><code class="language-js">
+	<span class="token literal-property property">social</span><span class="token operator">:</span>
+            <span class="token punctuation">[</span>
+             <span class="token punctuation">{</span>
+        		<span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">"Github Repo"</span><span class="token punctuation">,</span>
+        		<span class="token literal-property property">icon</span><span class="token operator">:</span> <span class="token string">"github"</span><span class="token punctuation">,</span>
+		        <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">"https://www.github.com/mesinkasir/dockar"</span>
+	         <span class="token punctuation">}</span><span class="token punctuation">,</span>
+             <span class="token punctuation">{</span>
+        		<span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">"Visit Main Site"</span><span class="token punctuation">,</span>
+        		<span class="token literal-property property">icon</span><span class="token operator">:</span> <span class="token string">"rocket-takeoff"</span><span class="token punctuation">,</span>
+		        <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">"https://captaline.pages.dev/"</span>
+	         <span class="token punctuation">}</span><span class="token punctuation">,</span>
+           <span class="token punctuation">]</span><span class="token punctuation">,</span></code></pre>
+<h3 id="footer-menu" tabindex="-1">Footer Menu <a class="header-anchor" href="#footer-menu"></a></h3>
+<p>If you have activate footer widget - make it <code>true</code>, next you can update your footer area. Search this line code</p>
+<pre class="language-js" tabindex="0"><code class="language-js">
+	<span class="token literal-property property">footer</span><span class="token operator">:</span>
+            <span class="token punctuation">[</span>
+             <span class="token punctuation">{</span>
+        		<span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">"Get Start"</span><span class="token punctuation">,</span>
+        		<span class="token literal-property property">nav</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                        <span class="token punctuation">{</span> 
+                            <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Download"</span><span class="token punctuation">,</span>
+                            <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">"/doc/getstart/download/"</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token punctuation">{</span> 
+                            <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Installation"</span><span class="token punctuation">,</span>
+                            <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">"/doc/getstart/install/"</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token punctuation">{</span> 
+                            <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Run Project"</span><span class="token punctuation">,</span>
+                            <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">"/doc/runproject/"</span>
+                        <span class="token punctuation">}</span>
+                     <span class="token punctuation">]</span>
+	         <span class="token punctuation">}</span><span class="token punctuation">,</span>
+             <span class="token punctuation">{</span>
+        		<span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">"New menu title here..."</span><span class="token punctuation">,</span>
+        		<span class="token literal-property property">nav</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                        <span class="token punctuation">{</span> 
+                            <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Footer nav menu title here..."</span><span class="token punctuation">,</span>
+                            <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">"Insert url link here...."</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token punctuation">{</span> 
+                            <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Footer 2 nav menu title here..."</span><span class="token punctuation">,</span>
+                            <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">"Insert url link here...."</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token punctuation">{</span> 
+                            <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Footer 3 nav menu title here..."</span><span class="token punctuation">,</span>
+                            <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">"Insert url link here...."</span>
+                        <span class="token punctuation">}</span>
+                     <span class="token punctuation">]</span>
+	         <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+<h3 id="website-author" tabindex="-1">Website Author <a class="header-anchor" href="#website-author"></a></h3>
+<p>Next you can update your wesbite author on this line code</p>
+<pre class="language-js" tabindex="0"><code class="language-js">
+	<span class="token literal-property property">author</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+		<span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"insert your name here..."</span><span class="token punctuation">,</span>
+		<span class="token literal-property property">email</span><span class="token operator">:</span> <span class="token string">"insert your email here..."</span><span class="token punctuation">,</span>
+		<span class="token literal-property property">facebook</span><span class="token operator">:</span> <span class="token string">"your facebook url here..."</span><span class="token punctuation">,</span>
+		<span class="token literal-property property">twitter</span><span class="token operator">:</span> <span class="token string">"your twiitter or x url here..."</span><span class="token punctuation">,</span>
+		<span class="token literal-property property">twitter_user</span><span class="token operator">:</span> <span class="token string">"@ your twitter user name.."</span><span class="token punctuation">,</span>
+		<span class="token literal-property property">url</span><span class="token operator">:</span> <span class="token string">"your author url here..."</span>
+	<span class="token punctuation">}</span></code></pre>
+
+<p class="small text-body-secondary"><i class="bi bi-tags"></i> Tags:
+<a href="https://dockar.axcora.com/tags/docs/" class="small text-body-secondary ms-3">docs</a>
+<a href="https://dockar.axcora.com/tags/configuration/" class="small text-body-secondary ms-3">configuration</a>
+<a href="https://dockar.axcora.com/tags/docs-configuration/" class="small text-body-secondary ms-3">docs configuration</a>
+</p>
+
+<div class="mt-3 row">
+<p class="col-md-6 semi text-body-secondary ">
+
+<i class="bi bi-calendar2-event"></i> 
+Update At 
+<strong>10 September 2024</strong> ,
+ 
+
+
+by 
+<strong>
+<a href="https://www.axcora.com/" class="text-body-secondary">
+Axcora
+</a>
+</strong>
+
+
+</p>
+<p class="col-md-6  text-end">
+<a href="https://github.com/axcora/dockar/edit/main/content/doc/configuration.md" class="icon-link semi text-body-secondary">
+<i class="bi bi-pen"></i> Edit This Page
+</a>
+</p>
+
+</div>
+<!-- cooming soon 
+<div class="row mt-3">
+<div class="col-md-6">
+<div class="p-3 rounded text-body-emphasis bg-body-tertiary card">
+<a href="https://dockar.axcora.com/doc/blogpage/" class="text-body-emphasis "><p class="small"><i class="bi bi-arrow-left-short"></i> Previous</p>
+<h3 class="pag-title">Blog Pages</h3></a>
+</div>
+</div>
+<div class="col-md-6 text-end">
+<div class="p-3 rounded text-body-emphasis bg-body-tertiary card">
+<a href="https://dockar.axcora.com/doc/docpage/doc-list/" class="text-body-emphasis "><p class="small">Next <i class="bi bi-arrow-right-short"></i></p>
+<h3 class="pag-title">Update Documentation List</h3></a>
+</div>
+</div>
+</div>
+ -->
+</div>
+
+<div class="col-md-2 p-3 docs-tocker" id="toci">
+<p class="tocs"><strong>On this Page</strong></p>
+<div class="small"><div class="toc">
+        <ul><li><a href="#configure-your-docs-site">Configure Your Docs Site </a></li><li><a href="#seo-setup">SEO Setup </a></li><li><a href="#widget-area">Widget Area </a></li><li><a href="#search-widget">Search Widget </a></li><li><a href="#github-collaborators">Github Collaborators </a></li><li><a href="#navigation-area">Navigation Area </a></li><li><a href="#social-icon">Social Icon </a></li><li><a href="#footer-menu">Footer Menu </a></li><li><a href="#website-author">Website Author </a></li></ul>
+      </div></div>
+</div>
+
+
+</div>
+</div>
+</div>  
+
+<div class="mobile">
+<div class="mobile">
+<nav class="navbar fixed-top border-bottom text-body-emphasis bg-body-tertiary">
+<div class="container-fluid">
+<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#docPage" aria-controls="docPage" aria-label="Toggle navigation">
+<i class="bi bi-list"></i>
+</button>
+<a class="navbar-brand" href="https://dockar.axcora.com"><strong>Dockar</strong></a>
+<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuPage" aria-controls="menuPage" aria-label="Toggle navigation">
+<i class="bi bi-three-dots-vertical"></i>
+</button>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="menuPage" aria-labelledby="menuPageLabel">
+<div class="offcanvas-header border-bottom">
+<h5 class="offcanvas-title" id="menuPageLabel">Page</h5>
+<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+</div>
+<div class="offcanvas-body">
+<ul class="navbar-nav justify-content-end flex-grow-1 pe-3 p-3">
+
+<li class="nav-item">
+<a class="nav-link active" href="/dockar/">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="/dockar/about/">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="/dockar/doc/introduction/">Docs</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="/dockar/blog/">Blog</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="/dockar/showcase/">Showcase</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="/dockar/addsite/">Add Site</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="/dockar/sponsor/">Sponsor</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="/dockar/contact/">Contact</a>
+</li>
+
+<li class="nav-item mt-5 p-3 text-center border-top">
+
+<a href="https://github.com/mesinkasir/dockar/" class="btn btn-sm rounded" title="Github Repo"><i class="bi bi-github"></i></a>
+
+<a href="https://www.hockeycomputindo.com/themes/" class="btn btn-sm rounded" title="JAMSTACK THEMES"><i class="bi bi-rocket-takeoff"></i></a>
+
+<a href="https://creativitas.dev/services/" class="btn btn-sm rounded" title="JAMSTACK DEVELOPER"><i class="bi bi-robot"></i></a>
+
+
+<button class="btn align-items-center rounded" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+<svg class="bi theme-icon-active btn-sm" width="14" height="14"><use href="#circle-half"></use></svg>
+<span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+</button>
+<ul class="dropdown-menu shadow" aria-labelledby="bd-theme-text">
+<li>
+<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+<svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+Light
+<svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+</button>
+</li>
+<li>
+<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+<svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+Dark
+<svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+</button>
+</li>
+<li>
+<button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+<svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+Auto
+<svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+</button>
+</li>
+</ul>
+
+</li>
+</ul>
+</div>
+</div>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="docPage" aria-labelledby="docPageLabel">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="docPageLabel">Documentation</h5>
+<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+</div>
+<div class="offcanvas-body">
+<form class="d-flex mb-3" role="search" data-bs-toggle="modal" data-bs-target="#searchModal">
+<input class="form-control me-2" type="search" placeholder="🔍     Search" aria-label="Search">
+</form>
+      
+
+
+<ul class="navbar-nav justify-content-end">
+<li class="nav-item ms-3">
+<a href="https://dockar.axcora.com/doc/introduction/" class="nav-link">Introduction</a></li><li class="nav-item dropdown ms-3">
+<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">Get Started</a>
+<ul class="dropdown-menu ms-1">
+<li class="nav-item ms-3">
+<a href="https://dockar.axcora.com/doc/getstart/download/" class="nav-link">Download</a></li>
+<li class="nav-item ms-3">
+<a href="https://dockar.axcora.com/doc/getstart/install/" class="nav-link">Installation</a></li>
+<li class="nav-item ms-3">
+<a href="https://dockar.axcora.com/doc/getstart/runproject/" class="nav-link">Run Project</a></li></ul>
+</li><li>
+</li>
+<li class="nav-item active ms-3" aria-current="page">
+<a href="https://dockar.axcora.com/doc/configuration/" class="nav-link active">Configuration</a></li>
+<li class="nav-item ms-3">
+<a href="https://dockar.axcora.com/doc/media/" class="nav-link">Media</a></li>
+<li class="nav-item ms-3">
+<a href="https://dockar.axcora.com/doc/youtube/" class="nav-link">Youtube Embed</a></li>
+<li class="nav-item ms-3">
+<a href="https://dockar.axcora.com/doc/page/" class="nav-link">Static Page</a></li><li class="nav-item dropdown ms-3">
+<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">Doc Page</a>
+<ul class="dropdown-menu ms-1">
+<li class="nav-item ms-3">
+<a href="https://dockar.axcora.com/doc/docpage/doc-list/" class="nav-link">Doc List</a></li>
+<li class="nav-item ms-3">
+<a href="https://dockar.axcora.com/doc/docpage/standard-doc/" class="nav-link">Standard Doc</a></li>
+<li class="nav-item ms-3">
+<a href="https://dockar.axcora.com/doc/docpage/sub-doc/" class="nav-link">Sub Doc</a></li></ul>
+</li><li>
+</li><li class="nav-item dropdown ms-3">
+<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">Blog Page</a>
+<ul class="dropdown-menu ms-1">
+<li class="nav-item ms-3">
+<a href="https://dockar.axcora.com/doc/blogpage/blog-list/" class="nav-link">Blog List</a></li>
+<li class="nav-item ms-3">
+<a href="https://dockar.axcora.com/doc/blogpage/article-blog-post/" class="nav-link">Article Post</a></li></ul>
+</li><li>
+</li></ul>
+</div>
+</div>
+
+</div>
+</nav>
+</div>
+
+<div class="container-fluid">
+<div class="row mt-5">
+<div class="col-md-12 p-3 docs-article">
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+<ol class="breadcrumb semi p-3">
+<li class="breadcrumb-item"><a href="https://dockar.axcora.com">Home</a></li>
+<li class="breadcrumb-item"><a href="https://dockar.axcora.com/doc/">Doc</a></li>
+<li class="breadcrumb-item active" aria-current="page">Configuration</li>
+</ol>
+</nav>
+
+
+<div class="text-center mb-3">
+<button class="btn btn-primary col-12" type="button" data-bs-toggle="collapse" data-bs-target="#TocDetail" aria-expanded="false" aria-controls="TocDetail">
+Table of Content
+</button>
+</div>
+<div class="collapse mt-3 mb-3" id="TocDetail">
+<div class="card card-body">
+<p class="tocs"><strong>On this Page</strong></p>
+<div class="toc">
+        <ul><li><a href="#configure-your-docs-site">Configure Your Docs Site </a></li><li><a href="#seo-setup">SEO Setup </a></li><li><a href="#widget-area">Widget Area </a></li><li><a href="#search-widget">Search Widget </a></li><li><a href="#github-collaborators">Github Collaborators </a></li><li><a href="#navigation-area">Navigation Area </a></li><li><a href="#social-icon">Social Icon </a></li><li><a href="#footer-menu">Footer Menu </a></li><li><a href="#website-author">Website Author </a></li></ul>
+      </div>
+</div>
+</div>
+
+
+<h1 id="configuration-2">Configuration</h1>
+<picture><source type="image/avif" srcset="/dockar/img/zw3HGl6uf0-1366.avif 1366w"><source type="image/webp" srcset="/dockar/img/zw3HGl6uf0-1366.webp 1366w"><img loading="lazy" decoding="async" src="/dockar/img/zw3HGl6uf0-1366.png" class="img-fluid" width="1366" height="681" alt="Configuration"></picture>
+<h3 id="configure-your-docs-site" tabindex="-1">Configure Your Docs Site <a class="header-anchor" href="#configure-your-docs-site"></a></h3>
+<p>To configure your site you can access on <code>_data/metadata.js</code> and open file with code editor.</p>
+<h3 id="seo-setup" tabindex="-1">SEO Setup <a class="header-anchor" href="#seo-setup"></a></h3>
+<p>For first let we setup your SEO , such title, description , favicon , and logo for your site.</p>
+<p>Don't forget , for media such image , video ,pdf and others file you need to upload on <code>content/media</code> , next you can simply add your media in to frontmatter.</p>
+<pre class="language-js" tabindex="0"><code class="language-js">	<span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">"Your title in here..."</span><span class="token punctuation">,</span>
+	<span class="token literal-property property">url</span><span class="token operator">:</span> <span class="token string">"Insert your domain url"</span><span class="token punctuation">,</span>
+	<span class="token literal-property property">language</span><span class="token operator">:</span> <span class="token string">"en"</span><span class="token punctuation">,</span>
+	<span class="token literal-property property">description</span><span class="token operator">:</span> <span class="token string">"Description about your docs site here..."</span><span class="token punctuation">,</span>
+	<span class="token literal-property property">image</span><span class="token operator">:</span> <span class="token string">"Your image in here..."</span><span class="token punctuation">,</span>
+	<span class="token literal-property property">favicon</span><span class="token operator">:</span> <span class="token string">"/media/img/dockarlogo.png"</span><span class="token punctuation">,</span></code></pre>
+<h3 id="widget-area" tabindex="-1">Widget Area <a class="header-anchor" href="#widget-area"></a></h3>
+<p>On this project you can activate or deactivate widget, such footer, social icon, and pagefind search functional.</p>
+<p>To activate you can change widget to be <code>true</code></p>
+<p>To deactivate widget you can simply change widget to be <code>false</code></p>
+<pre class="language-js" tabindex="0"><code class="language-js">	<span class="token literal-property property">show_social_icon</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// change false if you do not want to show social icon navbar</span>
+	<span class="token literal-property property">show_footer</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// change false if you do not want to show footer</span>
+	<span class="token literal-property property">show_search</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// change false if you do not want to show search widget</span></code></pre>
+<h3 id="search-widget" tabindex="-1">Search Widget <a class="header-anchor" href="#search-widget"></a></h3>
+<p>If you want to customize the placeholder and search title, you can change the code on this line.</p>
+<pre class="language-js" tabindex="0"><code class="language-js">    <span class="token literal-property property">search_widget</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                        <span class="token literal-property property">nav_title</span><span class="token operator">:</span> <span class="token string">"Change Text for your placeholder search widget here..."</span><span class="token punctuation">,</span>
+                        <span class="token literal-property property">modal_title</span><span class="token operator">:</span> <span class="token string">"Change text for your modal search title in here..."</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+<h3 id="github-collaborators" tabindex="-1">Github Collaborators <a class="header-anchor" href="#github-collaborators"></a></h3>
+<p>Dockar allows you to create collaboration for your project, first you need to add your github repo project. To use this feature you need to enable it on your document page for collaboration.</p>
+<p>Add your github repo on this line code</p>
+<pre class="language-js" tabindex="0"><code class="language-js">    <span class="token literal-property property">github_project</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                        <span class="token literal-property property">repo</span><span class="token operator">:</span> <span class="token string">"https://github.com/user/yourrepo"</span><span class="token punctuation">,</span>
+                        <span class="token literal-property property">branch</span><span class="token operator">:</span> <span class="token string">"add your repo branch here.."</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+<h3 id="navigation-area" tabindex="-1">Navigation Area <a class="header-anchor" href="#navigation-area"></a></h3>
+<p>To change nav page area you can access this line code, and customize it.</p>
+<pre class="language-js" tabindex="0"><code class="language-js">
+	<span class="token literal-property property">nav</span><span class="token operator">:</span> 
+          <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+        		<span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Home"</span><span class="token punctuation">,</span>
+		        <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">"/"</span>
+	         <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+        		<span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"About"</span><span class="token punctuation">,</span>
+		        <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">"/about/"</span>
+	         <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+        		<span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"your navbar title..."</span><span class="token punctuation">,</span>
+		        <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">"insert url page link here.."</span>
+	         <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span></code></pre>
+<h3 id="social-icon" tabindex="-1">Social Icon <a class="header-anchor" href="#social-icon"></a></h3>
+<p>After your have enable social icon, now you can change social icon area, you can access this line code, and customize it.</p>
+<p>Insert title, and to change icon you can see on <a href="https://icons.getbootstrap.com/">bootstrap icon →</a> , next you can insert bootstrap icon, example <code>&lt;i class=&quot;bi bi-airplane&quot;&gt;&lt;/i&gt;</code> just copy and insert this code <code>alphine</code> in to icon frontmatter.</p>
+<pre class="language-js" tabindex="0"><code class="language-js">
+	<span class="token literal-property property">social</span><span class="token operator">:</span>
+            <span class="token punctuation">[</span>
+             <span class="token punctuation">{</span>
+        		<span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">"Github Repo"</span><span class="token punctuation">,</span>
+        		<span class="token literal-property property">icon</span><span class="token operator">:</span> <span class="token string">"github"</span><span class="token punctuation">,</span>
+		        <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">"https://www.github.com/mesinkasir/dockar"</span>
+	         <span class="token punctuation">}</span><span class="token punctuation">,</span>
+             <span class="token punctuation">{</span>
+        		<span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">"Visit Main Site"</span><span class="token punctuation">,</span>
+        		<span class="token literal-property property">icon</span><span class="token operator">:</span> <span class="token string">"rocket-takeoff"</span><span class="token punctuation">,</span>
+		        <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">"https://captaline.pages.dev/"</span>
+	         <span class="token punctuation">}</span><span class="token punctuation">,</span>
+           <span class="token punctuation">]</span><span class="token punctuation">,</span></code></pre>
+<h3 id="footer-menu" tabindex="-1">Footer Menu <a class="header-anchor" href="#footer-menu"></a></h3>
+<p>If you have activate footer widget - make it <code>true</code>, next you can update your footer area. Search this line code</p>
+<pre class="language-js" tabindex="0"><code class="language-js">
+	<span class="token literal-property property">footer</span><span class="token operator">:</span>
+            <span class="token punctuation">[</span>
+             <span class="token punctuation">{</span>
+        		<span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">"Get Start"</span><span class="token punctuation">,</span>
+        		<span class="token literal-property property">nav</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                        <span class="token punctuation">{</span> 
+                            <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Download"</span><span class="token punctuation">,</span>
+                            <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">"/doc/getstart/download/"</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token punctuation">{</span> 
+                            <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Installation"</span><span class="token punctuation">,</span>
+                            <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">"/doc/getstart/install/"</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token punctuation">{</span> 
+                            <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Run Project"</span><span class="token punctuation">,</span>
+                            <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">"/doc/runproject/"</span>
+                        <span class="token punctuation">}</span>
+                     <span class="token punctuation">]</span>
+	         <span class="token punctuation">}</span><span class="token punctuation">,</span>
+             <span class="token punctuation">{</span>
+        		<span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">"New menu title here..."</span><span class="token punctuation">,</span>
+        		<span class="token literal-property property">nav</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                        <span class="token punctuation">{</span> 
+                            <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Footer nav menu title here..."</span><span class="token punctuation">,</span>
+                            <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">"Insert url link here...."</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token punctuation">{</span> 
+                            <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Footer 2 nav menu title here..."</span><span class="token punctuation">,</span>
+                            <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">"Insert url link here...."</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token punctuation">{</span> 
+                            <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Footer 3 nav menu title here..."</span><span class="token punctuation">,</span>
+                            <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">"Insert url link here...."</span>
+                        <span class="token punctuation">}</span>
+                     <span class="token punctuation">]</span>
+	         <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+<h3 id="website-author" tabindex="-1">Website Author <a class="header-anchor" href="#website-author"></a></h3>
+<p>Next you can update your wesbite author on this line code</p>
+<pre class="language-js" tabindex="0"><code class="language-js">
+	<span class="token literal-property property">author</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+		<span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"insert your name here..."</span><span class="token punctuation">,</span>
+		<span class="token literal-property property">email</span><span class="token operator">:</span> <span class="token string">"insert your email here..."</span><span class="token punctuation">,</span>
+		<span class="token literal-property property">facebook</span><span class="token operator">:</span> <span class="token string">"your facebook url here..."</span><span class="token punctuation">,</span>
+		<span class="token literal-property property">twitter</span><span class="token operator">:</span> <span class="token string">"your twiitter or x url here..."</span><span class="token punctuation">,</span>
+		<span class="token literal-property property">twitter_user</span><span class="token operator">:</span> <span class="token string">"@ your twitter user name.."</span><span class="token punctuation">,</span>
+		<span class="token literal-property property">url</span><span class="token operator">:</span> <span class="token string">"your author url here..."</span>
+	<span class="token punctuation">}</span></code></pre>
+
+
+<p class="small text-body-secondary"><i class="bi bi-tags"></i> Tags:
+<a href="https://dockar.axcora.com/tags/docs/" class="small text-body-secondary ms-3">docs</a>
+<a href="https://dockar.axcora.com/tags/configuration/" class="small text-body-secondary ms-3">configuration</a>
+<a href="https://dockar.axcora.com/tags/docs-configuration/" class="small text-body-secondary ms-3">docs configuration</a>
+</p>
+
+<div class="mt-3 row">
+<p class="col-12 semi text-body-secondary ">
+
+<i class="bi bi-calendar2-event"></i> 
+Update At 
+<strong>10 September 2024</strong> ,
+ 
+
+
+by 
+<strong>
+<a href="https://www.axcora.com/" class="text-body-secondary">
+Axcora
+</a>
+</strong>
+
+
+</p>
+<p class="col-12"><a href="https://github.com/axcora/dockar/edit/main/content/doc/configuration.md" class="icon-link semi text-body-secondary">
+<i class="bi bi-pen"></i> Edit This Page
+</a>
+</p>
+
+</div>
+<!-- cooming soon 
+<div class="row mt-3">
+<div class="col-12 mt-1 mb-1">
+<div class="p-3 rounded text-body-emphasis bg-body-tertiary card">
+<a href="https://dockar.axcora.com/doc/blogpage/" class="text-body-emphasis "><p class="small"><i class="bi bi-arrow-left-short"></i> Previous</p>
+<h3 class="pag-title">Blog Pages</h3></a>
+</div>
+</div>
+<div class="col-12 mt-1 mb-1 text-end">
+<div class="p-3 rounded text-body-emphasis bg-body-tertiary card">
+<a href="https://dockar.axcora.com/doc/docpage/doc-list/" class="text-body-emphasis "><p class="small">Next <i class="bi bi-arrow-right-short"></i></p>
+<h3 class="pag-title">Update Documentation List</h3></a>
+</div>
+</div>
+</div>
+ -->
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="text-center small p-1 text-body-secondary ft"></div>
+
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header bg-body-secondary">
+<h1 class="modal-title fs-5" id="searchModalLabel">Search</h1>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<div class="p-3">
+<link href="/dockar/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/dockar/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>window.addEventListener('DOMContentLoaded', (event) => {new PagefindUI({ element: "#search", showSubResults: true }); });</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script src="https://dockar.axcora.com/js/index.js"></script>
+<script src="https://dockar.axcora.com/js/main.js"></script>
+</body>
+</html>
