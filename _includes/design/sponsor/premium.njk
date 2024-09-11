@@ -1,0 +1,18 @@
+<div class="container-fluid">
+<div class="col-md-8 mx-auto mb-5">
+<div class="row p-1 justify-content-center">
+<div  class="col-md-12 p-3">
+<h3>{{sponsor.premium.title}}</h3>
+<p>{{sponsor.premium.text}}</p>
+</div>
+{% for s in sponsor.premium.company %}
+<div class="col-md-4 col-6 p-3">
+<a href="{{s.link}}" target="_blank" title="{{s.name}}">
+<img class="img-fluid rounded card" alt="{{s.name}}" width="100%" height="100%"
+src="{{s.image}}"/>
+</a>
+</div>
+{% endfor %}
+</div>
+</div>
+</div>

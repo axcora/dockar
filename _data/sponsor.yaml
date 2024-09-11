@@ -1,0 +1,54 @@
+title: Thanks For Sponsor
+description: Thank you for our sponsor to support this project
+button: 
+  - title: Explore All Sponsor
+    icon: box-arrow-up-right
+    link: /sponsor/
+  - title: Be Our Sponsor
+    icon: cup-hot
+    link: https://github.com/sponsors/mesinkasir/
+premium:
+ title: Premium Sponsor
+ text: Thank you for our premium sponsor to support this project
+ company: 
+  - name: HockeyComp
+    link: https://www.hockeycomputindo.com
+    image: /media/img/hockeycomp.jpeg
+  - name: Axcora Tech
+    link: https://www.axcora.com
+    image: /media/img/axcora.webp
+  - name: Creativitas Developer
+    link: https://creativitas.dev
+    image: /media/img/creativitas.webp
+silver:
+ title: Silver Sponsor
+ text: Thank you for our silver sponsor to support this project
+ company: 
+  - name: Creativitas Developer
+    link: https://creativitas.dev
+    image: /media/img/creativitas.webp
+suporter:
+ title: Supporters
+ text: Thank you for our supporters
+ company: 
+  - name: Adam Dj Brett
+    link: https://github.com/adamdjbrett
+    image: /media/img/adam.jpeg
+  - name: Grandlimousine
+    link: https://github.com/grandlimo/
+    image: /media/img/grandlimo.png
+  - name: LK Fiducaire
+    link: https://github.com/Dustcloudman
+    image: /media/img/lkfid.png
+  - name: Mesin Kasir
+    link: https://github.com/mesinkasir
+    image: /media/img/mesinkasir.jpeg
+  - name: Creative By Dre
+    link: https://github.com/creativebydre
+    image: /media/img/creativebydre.jpeg
+  - name: Creativitas
+    link: https://github.com/creativitas
+    image: /media/img/creativitas.png
+  - name: Axcora
+    link: https://github.com/axcora
+    image: /media/img/axcoras.png

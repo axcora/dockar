@@ -1,0 +1,17 @@
+<div class="col-md-10 mx-auto mb-5">
+<div class="container-fluid">
+<div class="row justify-content-center">
+{% for post in showcases | reverse %}
+<div class="col-md-6 p-3">
+{% if post.data.image %}<a href="{{post.data.url}}" target="_blank">
+<img class="img-fluid img-showcase rounded shadow mb-3" alt="{{post.data.name}}" width="100%" height="100%"
+src="{{post.data.image}}"/>
+</a>{% endif %}
+<h3><a href="{{post.data.url}}" target="_blank" class="text-body-emphasis">{{post.data.name}}</a></h3>
+<p><small>{{post.data.about}}</small></p>
+</div>
+{% endfor %}
+</div>
+{% include "design/showcase/pagination.njk" %}
+</div>
+</div>

@@ -1,0 +1,15 @@
+---
+layout: layouts/showcase.njk
+title: Showcase
+description: Website built with dockar 11ty documentation site.
+image: /media/img/dokaro.jpg
+button: 
+ text: Add Your Site
+ icon: plus-circle
+ link: /addsite/
+pagination:
+  data: collections.showcases
+  size: 6
+  alias: showcases
+permalink: "/showcase/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
+---

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="{{ metadata.language }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="ZRFkU136mBXIuYnH8_NxhFf8nOdiY43cdzVi6FTIOJ8" />
+<!-- SEO by creativitas.dev -->
+{% include "widget/seo.njk" %}
+<!-- SEO by creativitas.dev -->
+<link href="{{metadata.url}}/css/doc.css" rel="stylesheet" />
+<link href="{{metadata.url}}/css/main.css" rel="stylesheet" />
+</head>
+<body>
+{% include "widget/icon.njk" %}
+{% include "widget/navbar/main.njk" %}
+{{ content | safe }}
+{% include "widget/footer.njk" %}
+{% include "widget/search.njk" %}
+<script src="{{metadata.url}}/js/index.js"></script>
+<script src="{{metadata.url}}/js/main.js"></script>
+</body>
+</html>
