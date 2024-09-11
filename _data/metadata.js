@@ -127,7 +127,7 @@ export default {
                         { 
                             name: "Run Project",
                             link: "/doc/runproject/"
-                        }
+                        },
                         { 
                             name: "Configuration",
                             link: "/doc/configuration/"
